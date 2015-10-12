@@ -7,6 +7,9 @@ Provides `ship` and `fail` gifs.
 
 Go to [the deployed site](http://curated-ship-gifs.petegoo.com) and click the relevant preview link
 
+## Need to Blacklist a gif?
+Open a PR changing the blacklist.json file
+
 ## Using the API
 
 ### Pre-approved gifs
