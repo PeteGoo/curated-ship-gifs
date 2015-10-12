@@ -9,6 +9,8 @@ Go to [the deployed site](http://curated-ship-gifs.petegoo.com) and click the re
 
 ## Using the API
 
+### Pre-approved gifs
+
 Send a GET to
  
 http://curated-ship-gifs.petegoo.com/ship
@@ -16,3 +18,18 @@ http://curated-ship-gifs.petegoo.com/ship
  or
   
 http://curated-ship-gifs.petegoo.com/fail  
+
+### Avoiding blacklisted gifs
+
+Send a GET to
+ 
+http://curated-ship-gifs.petegoo.com/ship/lucky
+ 
+ or
+  
+http://curated-ship-gifs.petegoo.com/fail/lucky  
+ 
+ or
+  
+http://curated-ship-gifs.petegoo.com/search?q=boat+fail  
+
