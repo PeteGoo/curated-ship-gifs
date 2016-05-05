@@ -103,7 +103,7 @@ function search(searchTerm, count, callback) {
         }, function(err, res, body) {
         if(!err && res.statusCode == 200) {
             var imageUrl = body.data.image_url;
-            if(blacklistedGifs.indexOf(imageUrl) > -1) {
+            if(isBlacklisted(imageUrl)) {
                 console.log("Whoops!!!");
                 count++;
                 search(searchTerm, count, callback);
@@ -114,6 +114,15 @@ function search(searchTerm, count, callback) {
             }
         } 
     });    
+}
+
+function isBlacklisted(imageUrl) {
+    for(var i=0;i<blacklistedGifs.length;i++){
+        if(imageUrl.indexOf(blacklistedGifs[i]) != -1){
+            return true;
+        }
+    }
+    return false;
 }
 
 function apiImageResult(res, imageUrl) {
